@@ -7,16 +7,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Set up job
-        run: echo "Configuration du job..."
+        run: echo "Configuration du job"
 
       - name: Étape 1 - Initialisation
-        run: echo "Initialisation en cours..."
+        run: echo "Initialisation en cours"
 
       - name: Étape 2 - Récupération du code
         uses: actions/checkout@v4
 
       - name: Étape 3 - Build
-        run: echo "Compilation/Build du projet..."
+        run: echo "Compilation/Build du projet"
 
       - name: Étape 4 - Tests
         run: echo "Exécution des tests unitaires..."
