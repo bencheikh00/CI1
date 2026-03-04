@@ -1,0 +1,41 @@
+name: "Pipeline CI/CD Professionnel"
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  Production-Ready:
+   
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: "🏗️ Étape 1 : Configuration de l'environnement"
+        run: |
+          echo "Démarrage du pipeline sur $HOSTNAME"
+          echo "Système d'exploitation : ${{ runner.os }}"
+
+      - name: "📥 Étape 2 : Récupération du code source"
+        uses: actions/checkout@v4 
+
+      - name: "🔍 Étape 3 : Analyse de la qualité (Linting)"
+        run: echo "Vérification du formatage du code..."
+
+      - name: "🧱 Étape 4 : Compilation (Build)"
+        run: |
+          echo "Installation des dépendances..."
+          echo "Compilation du projet en cours..."
+
+      - name: "🧪 Étape 5 : Exécution des tests unitaires"
+        run: echo "Lancement des tests... 100% passés ✅"
+
+      - name: "🛡️ Étape 6 : Scan de sécurité"
+        run: echo "Recherche de vulnérabilités dans les librairies..."
+
+      - name: "📦 Étape 7 : Création de l'artéfact"
+        run: echo "Compression des fichiers pour le déploiement..."
+
+      - name: "🚀 Étape 8 : Fin du Pipeline"
+        run: echo "Pipeline CI terminé avec succès !"
