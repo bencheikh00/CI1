@@ -23,3 +23,9 @@ jobs:
         run: |
           echo "Démarrage du pipeline d’intégration continue"
           echo "STEP1= $STEP1"
+
+       - name: Étape 2 - Variable repository
+        run: |
+          echo "Variable d'environnement pour l'étape2""
+          echo "STEP2= ${{ vars.STEP2 }}"
+          
