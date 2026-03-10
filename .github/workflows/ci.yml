@@ -8,7 +8,7 @@ on:
 
 jobs:
   integration-continue:
-    name: Démonstration CI
+    name: Gestion des variables d’environnement et secrets
     runs-on: ubuntu-latest
 
     # Définition des variables d’environnement pour les étapes du pipeline
@@ -23,9 +23,8 @@ jobs:
         run: |
           echo "Démarrage du pipeline d’intégration continue"
           echo "STEP1= $STEP1"
-
-       - name: Étape 2 - Variable repository
+      
+      - name: Étape 2 - Variable Repository
         run: |
-          echo "Variable d'environnement pour l'étape2"
-          echo "STEP2= ${{ vars.STEP2 }}"
-          
+          echo "Variable d’environnement pour l’étape 2"
+          echo "STEP2= ${{ vars.STEP2 }}" 
