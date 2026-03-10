@@ -26,6 +26,6 @@ jobs:
 
        - name: Étape 2 - Variable repository
         run: |
-          echo "Variable d'environnement pour l'étape2""
+          echo "Variable d'environnement pour l'étape2"
           echo "STEP2= ${{ vars.STEP2 }}"
           
