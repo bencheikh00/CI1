@@ -9,7 +9,7 @@ on:
 jobs:
   integration-continue:
     name: Gestion des variables d’environnement et secrets
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, Windows, X64]
 
     # Définition des variables d’environnement pour les étapes du pipeline
     env:
@@ -22,7 +22,7 @@ jobs:
       - name: Étape 1 - Variable workflow
         run: |
           echo "Démarrage du pipeline d’intégration continue"
-          echo "STEP1= $STEP1"
+          echo "STEP1= $env:STEP1"
       
       - name: Étape 2 - Variable Repository
         run: |
