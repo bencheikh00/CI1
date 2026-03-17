@@ -9,7 +9,7 @@ on:
 jobs:
   integration-continue:
     name: Gestion des variables d’environnement et secrets
-    runs-on: [self-hosted, Windows, X64]
+    runs-on: [bencheikh]
 
     # Définition des variables d’environnement pour les étapes du pipeline
     env:
